@@ -31,5 +31,23 @@
 
 // console.log(sum(2, 3));
 
+import "./styles/style.css";
+import { base, list, frameworks, libs } from "./data/hbsData.js";
+import first_task from "./template/first_task.hbs";
+import second_task from "./template/second_task.hbs";
+import thirth_task from "./template/thirth_task.hbs";
+import four_tasks from "./template/four_task.hbs";
 
-import './styles/style.css'
+const root = document.querySelector("#root");
+
+const first = first_task(base);
+root.insertAdjacentHTML(first);
+
+const markup = second_task(list);
+root.insertAdjacentHTML("beforeend", markup);
+
+const thirth = thirth_task(frameworks);
+root.insertAdjacentHTML("beforeend", thirth);
+
+const four = four_tasks(libs);
+root.insertAdjacentHTML(four);
