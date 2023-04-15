@@ -41,7 +41,7 @@ import four_tasks from "./template/four_task.hbs";
 const root = document.querySelector("#root");
 
 const first = first_task(base);
-root.insertAdjacentHTML(first);
+root.insertAdjacentHTML("beforeend", first);
 
 const markup = second_task(list);
 root.insertAdjacentHTML("beforeend", markup);
@@ -50,4 +50,4 @@ const thirth = thirth_task(frameworks);
 root.insertAdjacentHTML("beforeend", thirth);
 
 const four = four_tasks(libs);
-root.insertAdjacentHTML(four);
+root.insertAdjacentHTML("beforeend", four);
